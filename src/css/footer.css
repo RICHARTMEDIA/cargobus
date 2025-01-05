@@ -1,0 +1,40 @@
+.footer {
+    background: var(--dark-bg);
+    padding: 1.5rem 0;
+    color: var(--gray-400);
+}
+
+.footer-container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.footer-text a {
+    color: var(--gray-400);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-text a:hover {
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.25rem 1rem;
+    }
+    
+    .footer-text {
+        font-size: 0.8125rem;
+    }
+}

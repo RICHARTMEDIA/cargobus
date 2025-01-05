@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wszystkie artykuły - Starko Transport</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">STARKO</a>
+            <nav class="nav-menu">
+                <a href="/#jak-pracujemy" class="nav-link">Jak pracujemy</a>
+                <a href="/#nasza-flota" class="nav-link">Nasza flota</a>
+                <a href="/#dlaczego-my" class="nav-link">Dlaczego my</a>
+                <a href="/#galeria" class="nav-link">Galeria</a>
+                <a href="/#kontakt" class="nav-link">Kontakt</a>
+                <button class="nav-button">+48 721 895 873</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-listing">
+            <div class="container">
+                <h1 class="section-title">Wszystkie artykuły</h1>
+                
+                <div class="blog-search">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Szukaj artykułów..." 
+                        class="search-input"
+                    >
+                </div>
+
+                <div class="blog-grid" id="blogGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© Starko Agency. All Rights Reserved 2024. Licensing. Developed by RICHART Digital.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/blog-listing.js"></script>
+</body>
+</html>

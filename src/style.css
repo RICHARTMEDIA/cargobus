@@ -1,0 +1,18 @@
+/* Base styles */
+@import './css/variables.css';
+@import './css/base.css';
+@import './css/animations.css';
+
+/* Components */
+@import './css/components/buttons.css';
+@import './css/components/modal.css';
+
+/* Layout */
+@import './css/header.css';
+@import './css/hero.css';
+@import './css/workflow.css';
+@import './css/fleet.css';
+@import './css/why-us.css';
+@import './css/gallery.css';
+@import './css/contact.css';
+@import './css/footer.css';
