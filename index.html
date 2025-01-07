@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starko - Transport towarów w Polsce i UE</title>
-    <meta name="description" content="Transport towarów od 100 kg do 1200 kg w całej Polsce i UE. Szybkość, precyzja, bezpieczeństwo – gwarancja Starko!">
+    <meta name="description"
+        content="Transport towarów od 100 kg do 1200 kg w całej Polsce i UE. Szybkość, precyzja, bezpieczeństwo – gwarancja Starko!">
     <link rel="stylesheet" href="/src/style.css">
+    <link rel="icon" href="/logo.svg" type="image/x-icon">
 </head>
+
 <body>
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">STARKO</a>
+            <button class="burger-menu-button" aria-label="Toggle menu">☰</button>
+
+
             <nav class="nav-menu">
                 <a href="#jak-pracujemy" class="nav-link">Jak pracujemy</a>
                 <a href="#nasza-flota" class="nav-link">Nasza flota</a>
@@ -19,8 +26,20 @@
                 <a href="#kontakt" class="nav-link">Kontakt</a>
                 <button class="nav-button">+48 721 895 873</button>
             </nav>
+            <div class="mobile-menu  ">
+                <div class="nav__link--mobile">
+                    <a href="#jak-pracujemy" class="nav-link">Jak pracujemy</a>
+                    <a href="#nasza-flota" class="nav-link">Nasza flota</a>
+                    <a href="#dlaczego-my" class="nav-link">Dlaczego my</a>
+                    <a href="#galeria" class="nav-link">Galeria</a>
+                    <a href="#kontakt" class="nav-link">Kontakt</a>
+                    <a href="tel:+48721895873" class="phone-button">+48 721 895 873</a>
+
+                </div>
+            </div>
         </div>
     </header>
+
 
     <main>
         <section class="hero">
@@ -83,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <form class="contact-form">
                         <div class="form-group">
                             <label for="name">Imię</label>
@@ -106,10 +125,47 @@
 
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">© Starko Agency. Wszelkie prawa zastrzeżone 2024. Licencjonowanie. Stworzone przez RICHART Digital.</p>
+            <p class="footer-text">© Starko Agency. Wszelkie prawa zastrzeżone 2024. Licencjonowanie. Stworzone przez
+                RICHART Digital.</p>
         </div>
     </footer>
 
     <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/sendTg.js"></script>
+
 </body>
+
 </html>
+
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenuButton = document.querySelector(".burger-menu-button");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (!burgerMenuButton || !mobileMenu) {
+        console.error("Элементы меню не найдены!");
+        return;
+    }
+
+    // Переключение бургер-меню и открытие мобильного меню
+    burgerMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("open");
+        if (mobileMenu.classList.contains("open")) {
+            burgerMenuButton.textContent = "✖"; // Меняем на крестик
+        } else {
+            burgerMenuButton.textContent = "☰"; // Меняем обратно на бургер
+        }
+    });
+
+    // Закрытие меню при клике на ссылку
+    mobileMenu.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("open");
+            burgerMenuButton.textContent = "☰"; // Убедимся, что кнопка вернется к бургеру
+        });
+    });
+});
+
+</script>

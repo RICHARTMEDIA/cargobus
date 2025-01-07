@@ -6,7 +6,7 @@ export const fleetData = [
             'Kubatura: 23 m³',
             'Załadunek: bokiem, tyłem, górą'
         ],
-        image: 'https://starko.pl/wp-content/uploads/2021/05/1.png'
+        image: './1.png'
     },
     {
         title: 'Bus plandeka (10 palet)',
@@ -15,7 +15,7 @@ export const fleetData = [
             'Kubatura: 26 m³',
             'Załadunek: bokiem, tyłem, górą'
         ],
-        image: 'https://starko.pl/wp-content/uploads/2021/05/21.png'
+        image: 'http://starko.pl/wp-content/uploads/2021/05/21.png'
     },
     {
         title: 'Bus plandeka z windą (9 palet)',
@@ -25,6 +25,6 @@ export const fleetData = [
             'Winda: 230 x 160 cm',
             'Załadunek: bokiem, tyłem, górą'
         ],
-        image: 'https://starko.pl/wp-content/uploads/2021/05/31.png'
+        image: 'http://starko.pl/wp-content/uploads/2021/05/31.png'
     }
 ];

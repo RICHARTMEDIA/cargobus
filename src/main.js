@@ -67,3 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createFeatureCards();
     // ... (previous initialization code) ...
 });
+
+
+

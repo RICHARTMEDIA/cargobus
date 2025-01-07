@@ -1,5 +1,5 @@
 import { getModalTemplate } from './template.js';
-import { handleModalSubmit, closeModal } from './handlers.js';
+import {closeModal } from './handlers.js';
 
 export function createModal() {
     const modal = document.createElement('div');
@@ -17,5 +17,4 @@ function setupModalEvents(modal) {
     
     overlay?.addEventListener('click', () => closeModal(modal));
     closeBtn?.addEventListener('click', () => closeModal(modal));
-    form?.addEventListener('submit', (e) => handleModalSubmit(e, modal));
 }
