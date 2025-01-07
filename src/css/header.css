@@ -229,6 +229,7 @@
 .burger-all {
     display: none;
     gap: 15px;
+    margin-right: 5px;
 }
 
 /* Для мобильных устройств показываем бургер-меню */
