@@ -1,3 +1,4 @@
+/* createGalleryItem.js */
 import { createElement } from '../../../utils/dom.js';
 
 export function createGalleryItem(image) {

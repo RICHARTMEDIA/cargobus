@@ -43,6 +43,7 @@
     opacity: 1;
 }
 
+/* --- на мобильных уменьшим отступы --- */
 @media (max-width: 768px) {
     .gallery {
         padding: 3rem 1rem;
@@ -52,4 +53,29 @@
         gap: 1.5rem;
         margin-top: 2rem;
     }
+}
+
+/* === Дополнительно стили Swiper (если нужно) === */
+.swiper {
+    width: 100%;
+    height: auto; /* подстраивается под контент */
+}
+.swiper-slide {
+    /* те же стили, что были у .gallery-item (aspect-ratio и т.д.) 
+       Но если уже «превратили» gallery-item в swiper-slide, 
+       они сохранятся, так как это тот же элемент.
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff !important; /* Стрелки белые */
+    /* Можно настроить позицию, фоновую заливку, бордер-радиус и т.д. */
+}
+
+
+.swiper-pagination-bullet {
+    background: #fff;
 }
