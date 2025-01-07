@@ -15,8 +15,17 @@
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">STARKO</a>
-            <button class="burger-menu-button" aria-label="Toggle menu">☰</button>
 
+            <div class="burger-all">
+                <a href="tel:+48721895873" class="phone-button">+48 721 895 873</a>
+
+                <!-- HTML -->
+                <button class="burger-menu-button" aria-label="Toggle menu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </div>
 
             <nav class="nav-menu">
                 <a href="#jak-pracujemy" class="nav-link">Jak pracujemy</a>
@@ -33,7 +42,6 @@
                     <a href="#dlaczego-my" class="nav-link">Dlaczego my</a>
                     <a href="#galeria" class="nav-link">Galeria</a>
                     <a href="#kontakt" class="nav-link">Kontakt</a>
-                    <a href="tel:+48721895873" class="phone-button">+48 721 895 873</a>
 
                 </div>
             </div>
@@ -140,30 +148,26 @@
 
 
 <script>
-   document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const burgerMenuButton = document.querySelector(".burger-menu-button");
     const mobileMenu = document.querySelector(".mobile-menu");
 
     if (!burgerMenuButton || !mobileMenu) {
-        console.error("Элементы меню не найдены!");
+        console.error("Menu elements not found!");
         return;
     }
 
-    // Переключение бургер-меню и открытие мобильного меню
+    // Toggle burger menu and mobile menu
     burgerMenuButton.addEventListener("click", () => {
+        burgerMenuButton.classList.toggle("open");
         mobileMenu.classList.toggle("open");
-        if (mobileMenu.classList.contains("open")) {
-            burgerMenuButton.textContent = "✖"; // Меняем на крестик
-        } else {
-            burgerMenuButton.textContent = "☰"; // Меняем обратно на бургер
-        }
     });
 
-    // Закрытие меню при клике на ссылку
+    // Close mobile menu when clicking on a link
     mobileMenu.querySelectorAll(".nav-link").forEach((link) => {
         link.addEventListener("click", () => {
             mobileMenu.classList.remove("open");
-            burgerMenuButton.textContent = "☰"; // Убедимся, что кнопка вернется к бургеру
+            burgerMenuButton.classList.remove("open");
         });
     });
 });
